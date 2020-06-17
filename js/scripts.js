@@ -1,12 +1,6 @@
-/*!
-    * Start Bootstrap - Freelancer v6.0.3 (https://startbootstrap.com/themes/freelancer)
-    * Copyright 2013-2020 Start Bootstrap
-    * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
-    */
     (function($) {
-    "use strict"; // Start of use strict
+    "use strict";
   
-    // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
         var target = $(this.hash);
@@ -20,7 +14,6 @@
       }
     });
         
-    // Floating label headings for the contact form
     $(function() {
       $("body").on("input propertychange", ".floating-label-form-group", function(e) {
         $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
@@ -31,7 +24,7 @@
       });
     });
   
-  })(jQuery); // End of use strict
+  })(jQuery);
   
 var countDownDate = new Date("June 30, 2020 12:30:00").getTime();
 var x = setInterval(function() {
@@ -41,8 +34,8 @@ var x = setInterval(function() {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  document.getElementById("weddingTimer").innerHTML = days + " Days | " + hours + " Hours | "
-  + minutes + " Minutes | " + seconds + " Seconds ";
+  document.getElementById("weddingTimer").innerHTML = "<b>" + days + " Days | " + hours + " Hours | "
+  + minutes + " Minutes | " + seconds + " Seconds" + "</b>";
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";
